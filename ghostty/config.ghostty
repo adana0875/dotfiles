@@ -3,3 +3,8 @@ window-width = 120
 window-height = 50
 font-family = JetBrainsMono Nerd Font Mono
 
+keybind = ctrl+w=close_surface
+keybind = ctrl+super+arrow_left=goto_split:left
+keybind = ctrl+super+arrow_right=goto_split:right
+keybind = ctrl+shift+arrow_left=resize_split:left,30
+keybind = ctrl+shift+arrow_right=resize_split:right,30
