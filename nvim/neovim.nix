@@ -11,10 +11,19 @@
       style = "moon";
     };
 
+    keymaps = [
+      {
+        key = "<leader>e";
+        mode = [ "n" ];
+        action = ":Neotree";
+      }
+    ];
+
     statusline.lualine.enable = true;
     telescope.enable = true;
     autocomplete.nvim-cmp.enable = true;
 
+    # start dash
     dashboard = {
       alpha = {
         enable = true;
@@ -22,6 +31,7 @@
       };
     };
 
+    # Treesitter
     treesitter = {
       enable = true;
       highlight.enable = true;
@@ -29,15 +39,25 @@
       autotagHtml = true;
     };
 
+    # LSP options
     lsp = {
       enable = true;
       formatOnSave = true;
 
       mappings = {
+        # this is to show errors
         openDiagnosticFloat = "le";
+
         goToDeclaration = "gD";
-        goToDefiniton = "gd";
+        goToDefinition = "gd";
         listReferences = "lr";
+      };
+    };
+
+    #file explorer
+    filetree = {
+      neo-tree = {
+        enable = true;
       };
     };
 
