@@ -4,6 +4,7 @@
 
     opts = {
       shiftwidth = 4;
+      tabstop = 4;
     };
     theme = {
       enable = true;
@@ -21,7 +22,13 @@
 
     statusline.lualine.enable = true;
     telescope.enable = true;
-    autocomplete.nvim-cmp.enable = true;
+    autocomplete.nvim-cmp = {
+      enable = true;
+      mappings = {
+        previous = "<Up>";
+        next = "<Down>";
+      };
+    };
 
     # start dash
     dashboard = {

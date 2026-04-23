@@ -222,10 +222,14 @@ layout {
 }
 
 // Add lines like this to spawn processes at startup.
+
+//for walker service, start elephant first
+spawn-at-startup "elephant"
 spawn-at-startup "walker --gapplication-service"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "swww" "img" "/home/andrew/Pictures/wallpapers/snowmountain.jpg"
-// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+//wallpaper using awww
+spawn-at-startup "awww-daemon"
+spawn-at-startup "awww" "img" "/home/andrew/Pictures/wallpapers/snowmountain.jpg"
 
 
 prefer-no-csd
