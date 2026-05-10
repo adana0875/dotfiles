@@ -38,6 +38,9 @@
       };
     };
 
+    # Auto Close brackets
+    autopairs.nvim-autopairs.enable = true;
+
     # Treesitter
     treesitter = {
       enable = true;
@@ -65,6 +68,14 @@
     filetree = {
       neo-tree = {
         enable = true;
+        setupOpts = {
+          filesystem = {
+            filtered_items = {
+              visible = true;
+              hide_gitignored = false;
+            };
+          };
+        };
       };
     };
 
@@ -73,6 +84,15 @@
       ts.enable = true;
       go.enable = true;
       rust.enable = true;
+      markdown = {
+        enable = true;
+        extensions = {
+          markview-nvim = {
+            enable = true;
+          };
+          render-markdown-nvim.enable = true;
+        };
+      };
     };
 
     formatter = {
