@@ -1,0 +1,14 @@
+[theme]
+mode = "dark"
+
+[dock]
+enabled = true
+position = "left"
+
+[shell]
+font_family = "CaskaydiaCove Nerd Font"
+
+[bar.default]
+padding = 20
+position = "top"
+scale = 1.25

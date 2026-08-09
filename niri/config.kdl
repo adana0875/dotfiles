@@ -1,6 +1,5 @@
 input {
 
-    focus-follows-mouse
     keyboard {
         xkb {
             // You can set rules, model, layout, variant and options.
@@ -118,7 +117,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 2
+        width 3
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -226,13 +225,14 @@ layout {
 //for walker service, start elephant first
 spawn-at-startup "elephant"
 spawn-at-startup "walker --gapplication-service"
+spawn-at-startup "noctalia"
 
 //wallpaper using awww
-spawn-at-startup "awww-daemon"
-spawn-at-startup "awww" "img" "/home/andrew/Pictures/wallpapers/snowmountain.jpg"
+// spawn-at-startup "awww-daemon"
+// spawn-at-startup "awww" "img" "/home/andrew/Pictures/wallpapers/snowmountain.jpg"
 
 
-prefer-no-csd
+//prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -290,9 +290,21 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+window-rule {
+    open-floating true
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+//floating windows get no border
+window-rule {
+    match is-floating=true
+    focus-ring {
+        off
+    }
+    border {
+        off
+    }
 }
 
 binds {
@@ -312,7 +324,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+D hotkey-overlay-title="Run an Application: Walker" { spawn "walker"; }
+    Mod+D hotkey-overlay-title="Run an Application: Walker" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
