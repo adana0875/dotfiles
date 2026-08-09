@@ -1,14 +1,105 @@
+[accessibility]
+ui_scale = 1.15
+
 [theme]
+builtin = "Noctalia"
+community_palette = "Oxocarbon"
 mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
 
 [dock]
 enabled = true
 position = "left"
+pinned = [ "librewolf", "ghostty" ]
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-3" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1720.0
+    cy = 1258.0
+    output = "DP-3"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
 [shell]
 font_family = "CaskaydiaCove Nerd Font"
 
 [bar.default]
-padding = 20
+concave_edge_corners = false
+end = [
+    "media",
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "session"
+]
+font_family = "CaskaydiaCove NF"
+margin_ends = 0
+padding = 25
+radius = 0
+start = [ "control-center", "launcher", "wallpaper", "workspaces", "cpu", "sysmon" ]
+thickness = 50
+widget_spacing = 15
 position = "top"
-scale = 1.25
+scale = 1.30
+
+
+[osd.kinds]
+media = false
+
+[widget.control-center]
+glyph = "menu-2"
+scale = 1.5
+
+[widget.cpu]
+stat = "cpu_temp"
+visualization = "none"
+
+[widget.launcher]
+capsule_foreground = "primary"
+capsule_padding = 5
+capsule_radius = 10
+glyph = "rocket"
+scale = 1.5
+
+[widget.media]
+enabled = false
+
+[widget.sysmon]
+stat = "gpu_temp"
+visualization = "none"
+
+[widget.wallpaper]
+enabled = false
