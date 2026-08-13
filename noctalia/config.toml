@@ -103,3 +103,9 @@ visualization = "none"
 
 [widget.wallpaper]
 enabled = false
+
+[theme.templates]
+enable_builtin_templates = true
+builtin_ids              = []        # opt-in; run: noctalia theme --list-templates
+enable_community_templates = true
+community_ids              = ["zed"]

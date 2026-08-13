@@ -1,0 +1,61 @@
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "session": {
+    "trust_all_worktrees": false
+  },
+  "autosave": "on_window_change",
+  "vim_mode": true,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": "Noctalia Dark",
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "languages": {
+    "Go": {
+      "formatter": {
+        "language_server": {
+          "name": "gopls"
+        }
+      }
+    },
+    "Nix": {
+      "formatter": {
+        "external": {
+          "command": "alejandra",
+          "arguments": [
+            "--quiet",
+            "--"
+          ]
+        }
+      }
+    },
+    "JavaScript": {
+      "formatter": "prettier"
+    },
+    "TypeScript": {
+      "formatter": "prettier"
+    },
+    "JSON": {
+      "formatter": "prettier"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "allowed": true,
+    "tabWidth": 3,
+    "bracketSpacing": true,
+    "jsxSingleQuote": true,
+    "singleQuote": true
+  },
+  "auto_install_extensions": {
+    "nix": true
+  }
+}

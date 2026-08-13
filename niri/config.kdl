@@ -2,21 +2,11 @@ input {
 
     keyboard {
         xkb {
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
-            // localectl set-x11-keymap.
         }
-
         // Enable numlock on startup, omitting this setting disables it.
         numlock
     }
+
 
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
@@ -36,11 +26,8 @@ input {
     }
 
     mouse {
-        // off
-        // natural-scroll
         accel-speed 0.05
         accel-profile "flat"
-        // scroll-method "no-scroll"
     }
 
     trackpoint {
@@ -53,21 +40,10 @@ input {
         // scroll-button-lock
         // middle-emulation
     }
-
-    // Uncomment this to make the mouse warp to the center of newly focused windows.
-    // warp-mouse-to-focus
-
-    // Focus windows and outputs automatically when moving the mouse into them.
-    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
 }
 
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
 output "DP-3" {
     mode "3440x1440@143.923"
     transform "normal"
@@ -75,7 +51,7 @@ output "DP-3" {
 
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 12
+    gaps 8
     center-focused-column "never"
     always-center-single-column
 
@@ -582,3 +558,18 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+
+    cursor {
+        xcursor-theme "Bibata-Modern-Ice"
+        xcursor-size 24
+    }
+
+    environment {
+    GDK_SCALE "1"
+GDK_DPI_SCALE "1"
+QT_SCALE_FACTOR "1"
+QT_AUTO_SCREEN_SCALE_FACTOR "0"
+}
+
+include "noctalia.kdl"
