@@ -1,4 +1,21 @@
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -13,6 +30,8 @@
     "light": "Zed (Default)",
     "dark": "Zed (Default)"
   },
+  "buffer_font_family": "CaskaydiaCove Nerd Font Mono",
+  "ui_font_family": "CaskaydiaCove Nerd Font Mono",
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": "Noctalia Dark",
