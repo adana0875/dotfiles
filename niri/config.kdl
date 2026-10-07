@@ -310,7 +310,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: Walker" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    MouseMiddle hotkey-overlay-title="Open Kando" { spawn-sh "kando --menu 'Main Menu'";}
+    Mod+MouseMiddle hotkey-overlay-title="Open Kando" { spawn-sh "kando --menu 'Main Menu'";}
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
